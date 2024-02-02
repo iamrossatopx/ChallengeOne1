@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <link rel="stylesheet" href="reset.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Encode / Decode js</title>
 </head>
-<body class="contents__box">
+
+<body>
+    <main class="contents__box">
+        <div class="simbolo__alura"><img src="./files/A.svg" alt="Simbolo da Alura"></div>
         <section class="message__box">
-            <p>
-                Digite seu texto
-            </p>
+            <div>
+                <input id="textocode" placeholder="Digite seu texto" />
+            </div>
+            <div>
+                <button id="btn1" class="action__buttons" onclick="criptografar()">Criptografar</button>
+                <button id="btn2" class="action__buttons" onclick="descriptografar()">Descriptografar</button>
+            </div>
         </section>
         <section class="painel__resultado">
-            <img src="./files/guylfsomething.svg" alt="Nenhuma Mensagem Encontrada">
-            <h1>
-                Nenhuma mensagem encontrada
-            </h1>
-            <p>
-                Digite o texto que deseja criptografar ou descriptografar
-            </p>
+            <img src="./files/guylfsomething.svg" alt="Nenhuma Mensagem Encontrada" />
+            <h1>Nenhuma mensagem encontrada</h1>
+            <p id="textocriptografado">Digite o texto que deseja criptografar ou descriptografar</p>
+            <button id="btn3" class="action__buttons" onclick="">Copiar</button>
         </section>
+    </main>
     <script src="app.js" defer></script>
 </body>
+
 </html>
