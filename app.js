@@ -1,7 +1,9 @@
 /*ajuste do conteudo a tela de acordo com o modo (portrait or landscape)*/
 if (window.visualViewport.width < window.visualViewport.height) {
   document.getElementById("mainforjs").style["flex-direction"] = "column";
-  document.getElementById("painel2forjs").style["width"] = "95vw";
+  document.getElementById("painel2forjs").style["width"] = "90vw";
+  document.getElementById("painel2forjs").style["height"] = "90vh";
+  document.getElementById("painel2forjs").style["padding"] = "2%";
 }
 
 function criptografar() {
