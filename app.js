@@ -1,9 +1,23 @@
 /*ajuste do conteudo a tela de acordo com o modo (portrait or landscape)*/
 if (window.visualViewport.width < window.visualViewport.height) {
   document.getElementById("mainforjs").style["flex-direction"] = "column";
-  document.getElementById("painel2forjs").style["width"] = "90vw";
-  document.getElementById("painel2forjs").style["height"] = "90vh";
-  document.getElementById("painel2forjs").style["padding"] = "2%";
+  document.getElementById("painel2forjs").style["width"] = "auto";
+  document.getElementById("painel2forjs").style["height"] = "auto";
+  document.getElementById("botoes__cripto").innerHTML = `<div>
+  <div>
+      <p class="aviso">Apenas letras minúsculas e sem acento.</p>
+  </div>
+    <button id="btn1" class="action__buttons" onclick="criptografar()">
+        Criptografar
+    </button>
+    </div>
+    <div>
+    <button id="btn2" class="action__buttons" onclick="descriptografar()">
+        Descriptografar
+    </button>
+    </div>`;
+    document.getElementById("btn1").style["width"] = "90vw";
+    document.getElementById("btn2").style["width"] = "90vw";
 }
 
 function criptografar() {
@@ -42,15 +56,17 @@ function criptografar() {
 }
 
 function descriptografar() {
-    var texto_a_manusear = document.getElementById("textocode").value;
-    var texto_manuseado = "";
-    if (texto_a_manusear) {
-      texto_manuseado = decryptar(texto_a_manusear);
-      document.getElementById("btn3").style["visibility"] = "visible";
-      document.getElementById("painel").innerHTML = `<p id='textocriptografado'>${texto_manuseado}</p>`;
-      document.getElementById("textocode").value = `${texto_manuseado}`;
-      console.log(texto_manuseado);
-    }
+  var texto_a_manusear = document.getElementById("textocode").value;
+  var texto_manuseado = "";
+  if (texto_a_manusear) {
+    texto_manuseado = decryptar(texto_a_manusear);
+    document.getElementById("btn3").style["visibility"] = "visible";
+    document.getElementById(
+      "painel"
+    ).innerHTML = `<p id='textocriptografado'>${texto_manuseado}</p>`;
+    document.getElementById("textocode").value = `${texto_manuseado}`;
+    console.log(texto_manuseado);
+  }
 }
 
 function decryptar(textoparadecrypt) {
@@ -62,15 +78,15 @@ function decryptar(textoparadecrypt) {
   return textoparadecrypt;
 }
 
-function copiar() {   
-    /*código copiado do w3school*/ 
+function copiar() {
+  /*código copiado do w3school*/
   var copyText = document.getElementById("textocode");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copyText.value);
-  
+
   var tooltip = document.getElementById("myTooltip");
-  tooltip.style['visibility'] = 'visible';
+  tooltip.style["visibility"] = "visible";
   tooltip.innerHTML = "Texto Copiado!";
 }
 

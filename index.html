@@ -24,7 +24,10 @@
             oninput="this.value=this.value.toLowerCase(); this.value=this.value.replace(/[^0-9A-Za-z ]+/g, '')"
           ></textarea>
         </div>
-        <div>
+        <div id="botoes__cripto">
+            <div>
+                <p class="aviso">Apenas letras minúsculas e sem acento.</p>
+            </div>
           <button id="btn1" class="action__buttons" onclick="criptografar()">
             Criptografar
           </button>
