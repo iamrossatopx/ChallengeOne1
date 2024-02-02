@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <!--reset básico ao iniciar a página-->
     <link rel="stylesheet" href="reset.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Encode / Decode js</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main id="mainforjs" class="contents__box">
-        <div class="simbolo__alura"><img src="./files/A.svg" alt="Simbolo da Alura"></div>
-        <section class="message__box">
-            <div>
-                <!--Tratamento de input, só aceitar letras e números, e maiúsculas são convertidas para minúsculas-->
-                <textarea name="" id="textocode" placeholder="Digite seu texto" oninput="this.value=this.value.toLowerCase(); this.value=this.value.replace(/[^0-9A-Za-z]+/g, '')"></textarea>
-            </div>
-            <div>
-                <button id="btn1" class="action__buttons" onclick="criptografar()">Criptografar</button>
-                <button id="btn2" class="action__buttons" onclick="descriptografar()">Descriptografar</button>
-            </div>
-        </section>
-        <section id="painel2forjs" class="painel__resultado">
-            <!--Mensagem padrão, alterada pelo js assim que criptografar ou descriptografar-->
-            <img src="./files/guylfsomething.svg" alt="Nenhuma Mensagem Encontrada" />
-            <h1>Nenhuma mensagem encontrada</h1>
-            <p id="textocriptografado">Digite o texto que deseja criptografar ou descriptografar</p>
-            <button id="btn3" class="action__buttons" onclick="">Copiar</button>
-        </section>
+      <div class="simbolo__alura">
+        <img src="./files/A.svg" alt="Simbolo da Alura" />
+      </div>
+      <section class="message__box">
+        <div>
+          <!--Tratamento de input, só aceitar letras e números, e maiúsculas são convertidas para minúsculas-->
+          <textarea
+            name="areadetexto"
+            id="textocode"
+            placeholder="Digite seu texto"
+            oninput="this.value=this.value.toLowerCase(); this.value=this.value.replace(/[^0-9A-Za-z ]+/g, '')"
+          ></textarea>
+        </div>
+        <div>
+          <button id="btn1" class="action__buttons" onclick="criptografar()">
+            Criptografar
+          </button>
+          <button id="btn2" class="action__buttons" onclick="descriptografar()">
+            Descriptografar
+          </button>
+        </div>
+      </section>
+      <section id="painel2forjs" class="painel__resultado">
+        <div id="painel">
+          <!--Mensagem padrão, alterada pelo js assim que criptografar ou descriptografar-->
+          <img
+            src="./files/guylfsomething.svg"
+            alt="Nenhuma Mensagem Encontrada"
+          />
+          <h1>Nenhuma mensagem encontrada</h1>
+          <p id="textocriptografado">
+            Digite o texto que deseja criptografar ou descriptografar
+          </p>
+        </div>
+        <button id="btn3" class="action__buttons" onclick="copiar()">Copiar</button>
+      </section>
     </main>
-    <script src="app.js"></script>
-</body>
-
+    <footer>
+      <a href="https://www.linkedin.com/in/iamrossatopx/"
+        >Desenvolvido por Diego Rossato Corrêa Pereira</a
+      >
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
 </html>

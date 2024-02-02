@@ -46,10 +46,14 @@ header {
   }
 }
 
+#painel {
+    visibility: visible;
+}
+
 .painel__resultado {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   background-color: #ffffff;
   margin: 2%;
@@ -59,6 +63,7 @@ header {
   border-radius: 25px;
   padding: 2%;
   word-wrap: break-word;
+  word-break: break-all;
 }
 
 .simbolo__alura {
