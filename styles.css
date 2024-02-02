@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 
+
+
 body {
   font-family: "Poor Story", system-ui;
   /* background-color: #b0ddf7; */
@@ -14,7 +16,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
 }
 
 .message__box {
@@ -34,7 +35,6 @@ header {
   word-break: break-all;
   width: 40vw;
   height: 30vh;
-  overflow: hidden;
   &::placeholder {
     border: transparent;
     color: #000000;
@@ -49,6 +49,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: #ffffff;
   margin: 2%;
   width: 20vw;
