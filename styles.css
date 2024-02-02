@@ -33,7 +33,7 @@ header {
   border: transparent;
   font-size: 36px;
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-word;
   width: 40vw;
   height: 30vh;
   &::placeholder {
@@ -63,7 +63,7 @@ header {
   border-radius: 25px;
   padding: 2%;
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .simbolo__alura {
@@ -93,3 +93,43 @@ h1 {
   color: #000000;
   font-size: 24px;
 }
+
+/*copiado do w3school*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: hidden;
+    opacity: 1;
+  }

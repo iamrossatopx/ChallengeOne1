@@ -60,7 +60,17 @@ function decryptar(textoparadecrypt) {
   return textoparadecrypt;
 }
 
-function copiar() {}
+function copiar() {   
+    /*código copiado do w3school*/ 
+  var copyText = document.getElementById("textocode");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.style['visibility'] = 'visible';
+  tooltip.innerHTML = "Texto Copiado!";
+}
 
 /*
 let botao1 = document.getElementById('#btn1');
