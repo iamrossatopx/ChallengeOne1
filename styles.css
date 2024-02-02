@@ -30,7 +30,11 @@ header {
   background-color: transparent;
   border: transparent;
   font-size: 36px;
+  word-wrap: break-word;
   word-break: break-all;
+  width: 40vw;
+  height: 30vh;
+  overflow: hidden;
   &::placeholder {
     border: transparent;
     color: #000000;
